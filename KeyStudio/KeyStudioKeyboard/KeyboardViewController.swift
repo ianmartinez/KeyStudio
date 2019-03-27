@@ -19,7 +19,10 @@ class KeyboardViewController: UIInputViewController {
         keyboardView = (objects.first as! KeyboardView)
         keyboardView.delegate = self
         
-        guard let inputView = inputView else { return }
+        guard let inputView = inputView else {
+            return
+        }
+        
         inputView.addSubview(keyboardView)
         keyboardView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -35,32 +38,17 @@ class KeyboardViewController: UIInputViewController {
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
-        let theme: KeyboardTheme
-        
-        if textDocumentProxy.keyboardAppearance == .dark {
-            theme = .dark
-        } else {
-            theme = .light
-        }
-        
+        let theme: KeyboardTheme = (textDocumentProxy.keyboardAppearance == .dark) ? .dark : .light
         keyboardView.setTheme(theme)
     }
 }
 
 extension KeyboardViewController: KeyboardDelegate {
-    func insertChar(_ newChar: String) {
-        textDocumentProxy.insertText(newChar)
+    func insertText(_ text: String) {
+        textDocumentProxy.insertText(text)
     }
     
     func deleteCharBeforeCursor() {
         textDocumentProxy.deleteBackward()
-    }
-    
-    func getCharBeforeCursor() -> String? {
-        guard let character = textDocumentProxy.documentContextBeforeInput?.last else {
-            return nil
-        }
-        
-        return String(character)
     }
 }

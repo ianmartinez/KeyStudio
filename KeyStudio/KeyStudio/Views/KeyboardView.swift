@@ -9,9 +9,8 @@
 import UIKit
 
 protocol KeyboardDelegate: class {
-    func insertChar(_ newCharacter: String)
+    func insertText(_ newCharacter: String)
     func deleteCharBeforeCursor()
-    func getCharBeforeCursor() -> String?
 }
 
 class KeyboardView: UIView {
@@ -61,7 +60,7 @@ class KeyboardView: UIView {
     }
     
     @IBAction func helloPressed(_ sender: Any) {
-        insertKeyChar(key: sender as! KeyboardKey)
+        insertKeyText(key: sender as! KeyboardKey)
     }
     
     @IBAction func deletePressed() {
@@ -69,12 +68,12 @@ class KeyboardView: UIView {
     }
     
     @IBAction func spacePressed() {
-        delegate?.insertChar(" ")
+        delegate?.insertText(" ")
     }
     
-    func insertKeyChar(key: KeyboardKey) {
-        if let keyChar = key.title(for: .normal) {
-            delegate?.insertChar(keyChar)
+    func insertKeyText(key: KeyboardKey) {
+        if let keyText = key.title(for: .normal) {
+            delegate?.insertText(keyText)
         }
     }
 }
