@@ -9,48 +9,58 @@
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
-
-    @IBOutlet var nextKeyboardButton: UIButton!
-    
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        
-        // Add custom view sizing constraints here
-    }
+    var keyboardView: KeyboardView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Perform custom UI setup here
-        self.nextKeyboardButton = UIButton(type: .system)
+        let nib = UINib(nibName: "KeyboardView", bundle: nil)
+        let objects = nib.instantiate(withOwner: nil, options: nil)
+        keyboardView = (objects.first as! KeyboardView)
+        keyboardView.delegate = self
         
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
+        guard let inputView = inputView else { return }
+        inputView.addSubview(keyboardView)
+        keyboardView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+        NSLayoutConstraint.activate([
+            keyboardView.leftAnchor.constraint(equalTo: inputView.leftAnchor),
+            keyboardView.topAnchor.constraint(equalTo: inputView.topAnchor),
+            keyboardView.rightAnchor.constraint(equalTo: inputView.rightAnchor),
+            keyboardView.bottomAnchor.constraint(equalTo: inputView.bottomAnchor)
+            ])
         
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-    }
-    
-    override func textWillChange(_ textInput: UITextInput?) {
-        // The app is about to change the document's contents. Perform any preparation here.
+        keyboardView.setNextKeyboardVisible(needsInputModeSwitchKey)
+        keyboardView.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
+        let theme: KeyboardTheme
         
-        var textColor: UIColor
-        let proxy = self.textDocumentProxy
-        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-            textColor = UIColor.white
+        if textDocumentProxy.keyboardAppearance == .dark {
+            theme = .dark
         } else {
-            textColor = UIColor.black
+            theme = .light
         }
-        self.nextKeyboardButton.setTitleColor(textColor, for: [])
+        
+        keyboardView.setTheme(theme)
     }
+}
 
+extension KeyboardViewController: KeyboardDelegate {
+    func insertChar(_ newChar: String) {
+        textDocumentProxy.insertText(newChar)
+    }
+    
+    func deleteCharBeforeCursor() {
+        textDocumentProxy.deleteBackward()
+    }
+    
+    func getCharBeforeCursor() -> String? {
+        guard let character = textDocumentProxy.documentContextBeforeInput?.last else {
+            return nil
+        }
+        
+        return String(character)
+    }
 }

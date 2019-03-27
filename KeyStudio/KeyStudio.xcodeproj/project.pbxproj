@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752AE960224540780044226A /* KeyboardKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AE95F224540780044226A /* KeyboardKey.swift */; };
+		752AE962224542920044226A /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752AE961224542920044226A /* KeyboardView.xib */; };
+		752AE964224543850044226A /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AE963224543850044226A /* KeyboardView.swift */; };
+		7534E70D224BEBDC0008C537 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752AE961224542920044226A /* KeyboardView.xib */; };
+		7534E70E224BEC1E0008C537 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AE963224543850044226A /* KeyboardView.swift */; };
+		7534E70F224BEDB60008C537 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757CA6D52241A9E300762569 /* KeyboardTheme.swift */; };
+		7534E710224BEEE70008C537 /* KeyboardKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AE95F224540780044226A /* KeyboardKey.swift */; };
 		757CA6AD2241A73C00762569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757CA6AC2241A73C00762569 /* AppDelegate.swift */; };
 		757CA6AF2241A73C00762569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757CA6AE2241A73C00762569 /* ViewController.swift */; };
 		757CA6B22241A73C00762569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757CA6B02241A73C00762569 /* Main.storyboard */; };
@@ -14,7 +21,7 @@
 		757CA6B72241A73D00762569 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757CA6B52241A73D00762569 /* LaunchScreen.storyboard */; };
 		757CA6C92241A8A900762569 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757CA6C82241A8A900762569 /* KeyboardViewController.swift */; };
 		757CA6CD2241A8A900762569 /* KeyStudioKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 757CA6C62241A8A800762569 /* KeyStudioKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		757CA6D62241A9E300762569 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757CA6D52241A9E300762569 /* Theme.swift */; };
+		757CA6D62241A9E300762569 /* KeyboardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757CA6D52241A9E300762569 /* KeyboardTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		752AE95F224540780044226A /* KeyboardKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKey.swift; sourceTree = "<group>"; };
+		752AE961224542920044226A /* KeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		752AE963224543850044226A /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		757CA6A92241A73C00762569 /* KeyStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		757CA6AC2241A73C00762569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757CA6AE2241A73C00762569 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +62,7 @@
 		757CA6C62241A8A800762569 /* KeyStudioKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeyStudioKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		757CA6C82241A8A900762569 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		757CA6CA2241A8A900762569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		757CA6D52241A9E300762569 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		757CA6D52241A9E300762569 /* KeyboardTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +107,7 @@
 				757CA6D22241A97000762569 /* Views */,
 				757CA6AC2241A73C00762569 /* AppDelegate.swift */,
 				757CA6AE2241A73C00762569 /* ViewController.swift */,
-				757CA6D52241A9E300762569 /* Theme.swift */,
+				757CA6D52241A9E300762569 /* KeyboardTheme.swift */,
 				757CA6B02241A73C00762569 /* Main.storyboard */,
 				757CA6B32241A73D00762569 /* Assets.xcassets */,
 				757CA6B52241A73D00762569 /* LaunchScreen.storyboard */,
@@ -118,6 +128,9 @@
 		757CA6D22241A97000762569 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				752AE95F224540780044226A /* KeyboardKey.swift */,
+				752AE961224542920044226A /* KeyboardView.xib */,
+				752AE963224543850044226A /* KeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,9 +186,11 @@
 				TargetAttributes = {
 					757CA6A82241A73C00762569 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					757CA6C52241A8A800762569 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -204,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				757CA6B72241A73D00762569 /* LaunchScreen.storyboard in Resources */,
+				752AE962224542920044226A /* KeyboardView.xib in Resources */,
 				757CA6B42241A73D00762569 /* Assets.xcassets in Resources */,
 				757CA6B22241A73C00762569 /* Main.storyboard in Resources */,
 			);
@@ -213,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7534E70D224BEBDC0008C537 /* KeyboardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,9 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757CA6D62241A9E300762569 /* Theme.swift in Sources */,
+				757CA6D62241A9E300762569 /* KeyboardTheme.swift in Sources */,
 				757CA6AF2241A73C00762569 /* ViewController.swift in Sources */,
 				757CA6AD2241A73C00762569 /* AppDelegate.swift in Sources */,
+				752AE964224543850044226A /* KeyboardView.swift in Sources */,
+				752AE960224540780044226A /* KeyboardKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				757CA6C92241A8A900762569 /* KeyboardViewController.swift in Sources */,
+				7534E70F224BEDB60008C537 /* KeyboardTheme.swift in Sources */,
+				7534E710224BEEE70008C537 /* KeyboardKey.swift in Sources */,
+				7534E70E224BEC1E0008C537 /* KeyboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +419,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlinsoft.KeyStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -416,7 +438,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlinsoft.KeyStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -435,7 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlinsoft.KeyStudio.KeyStudioKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -454,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.atlinsoft.KeyStudio.KeyStudioKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
