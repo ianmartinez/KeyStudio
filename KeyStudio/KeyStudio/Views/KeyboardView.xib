@@ -17,33 +17,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpz-HD-1j9" customClass="KeyboardKey" customModule="KeyStudio" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="183" width="56" height="30"/>
+                    <rect key="frame" x="10" y="165" width="56" height="38"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="56" id="BNh-wa-PAI"/>
                     </constraints>
-                    <state key="normal" title="Next KB"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <state key="normal" title="Next"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tec-nv-6mf" customClass="KeyboardKey" customModule="KeyStudio" customModuleProvider="target">
-                    <rect key="frame" x="56" y="183" width="289" height="30"/>
+                    <rect key="frame" x="76" y="165" width="229" height="38"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" title="Space">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="spacePressed" destination="iN0-l3-epB" eventType="touchDragInside" id="euh-3W-CPU"/>
+                        <action selector="spacePressed" destination="iN0-l3-epB" eventType="touchUpInside" id="kVV-j6-tNM"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-0I-CcH" customClass="KeyboardKey" customModule="KeyStudio" customModuleProvider="target">
-                    <rect key="frame" x="345" y="183" width="30" height="30"/>
+                    <rect key="frame" x="315" y="165" width="50" height="38"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="jBn-O4-g1m"/>
+                        <constraint firstAttribute="width" constant="50" id="jBn-O4-g1m"/>
                     </constraints>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" title="Del"/>
                     <connections>
-                        <action selector="deletePressed" destination="iN0-l3-epB" eventType="touchDragInside" id="2xJ-2H-hHD"/>
+                        <action selector="deletePressed" destination="iN0-l3-epB" eventType="touchUpInside" id="ydx-pI-8So"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-ni-86n" customClass="KeyboardKey" customModule="KeyStudio" customModuleProvider="target">
-                    <rect key="frame" x="159" y="91" width="35" height="30"/>
+                    <rect key="frame" x="120" y="79" width="74" height="42"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Hello"/>
                     <connections>
@@ -51,17 +57,18 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="bpz-HD-1j9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8n6-lA-tgK"/>
-                <constraint firstItem="bpz-HD-1j9" firstAttribute="baseline" secondItem="Tec-nv-6mf" secondAttribute="baseline" id="LHJ-Jh-Q9x"/>
-                <constraint firstItem="bpz-HD-1j9" firstAttribute="baseline" secondItem="rhm-0I-CcH" secondAttribute="baseline" id="PaJ-ZY-mJv"/>
-                <constraint firstItem="Tec-nv-6mf" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Ybl-sc-IoD"/>
-                <constraint firstAttribute="trailing" secondItem="rhm-0I-CcH" secondAttribute="trailing" id="aqL-X3-4rg"/>
-                <constraint firstItem="rhm-0I-CcH" firstAttribute="leading" secondItem="Tec-nv-6mf" secondAttribute="trailing" id="kVI-RS-Rgd"/>
-                <constraint firstItem="Tec-nv-6mf" firstAttribute="leading" secondItem="bpz-HD-1j9" secondAttribute="trailing" id="ziC-LG-9kC"/>
+                <constraint firstItem="rhm-0I-CcH" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-10" id="30G-Jq-Rkt"/>
+                <constraint firstItem="bpz-HD-1j9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="8n6-lA-tgK"/>
+                <constraint firstItem="bpz-HD-1j9" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-10" id="NIb-5m-mbk"/>
+                <constraint firstItem="Tec-nv-6mf" firstAttribute="bottom" secondItem="bpz-HD-1j9" secondAttribute="bottom" id="Ybl-sc-IoD"/>
+                <constraint firstAttribute="trailing" secondItem="rhm-0I-CcH" secondAttribute="trailing" constant="10" id="aqL-X3-4rg"/>
+                <constraint firstItem="rhm-0I-CcH" firstAttribute="leading" secondItem="Tec-nv-6mf" secondAttribute="trailing" constant="10" id="kVI-RS-Rgd"/>
+                <constraint firstItem="Tec-nv-6mf" firstAttribute="leading" secondItem="bpz-HD-1j9" secondAttribute="trailing" constant="10" id="ziC-LG-9kC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <edgeInsets key="layoutMargins" top="10" left="0.0" bottom="10" right="10"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="deleteButton" destination="rhm-0I-CcH" id="hbw-ps-x7f"/>

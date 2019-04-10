@@ -14,9 +14,8 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "KeyboardView", bundle: nil)
-        let objects = nib.instantiate(withOwner: nil, options: nil)
-        keyboardView = (objects.first as! KeyboardView)
+        let nib = UINib(nibName: "KeyboardView", bundle: nil).instantiate(withOwner: nil, options: nil)
+        keyboardView = (nib.first as! KeyboardView)
         keyboardView.delegate = self
         
         guard let inputView = inputView else {

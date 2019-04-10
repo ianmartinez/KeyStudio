@@ -16,8 +16,9 @@ class KeyboardKey: UIButton {
     private func styleButton() {
         layer.cornerRadius = 5.0
         layer.masksToBounds = false
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        layer.shadowRadius = 0.0
+        layer.shadowRadius = 1
         layer.shadowOpacity = 0.35
     }
     
