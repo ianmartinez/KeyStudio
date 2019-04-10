@@ -51,7 +51,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-ni-86n" customClass="KeyboardKey" customModule="KeyStudio" customModuleProvider="target">
                     <rect key="frame" x="120" y="79" width="74" height="42"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Hello"/>
+                    <state key="normal" title="á"/>
                     <connections>
                         <action selector="helloPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="7zM-C3-wUI"/>
                     </connections>

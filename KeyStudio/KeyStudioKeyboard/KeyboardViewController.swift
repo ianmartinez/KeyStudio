@@ -42,12 +42,17 @@ class KeyboardViewController: UIInputViewController {
     }
 }
 
+let feedbackGen = UIImpactFeedbackGenerator(style: .medium)
+
 extension KeyboardViewController: KeyboardDelegate {
+    
     func insertText(_ text: String) {
+        feedbackGen.impactOccurred()
         textDocumentProxy.insertText(text)
     }
     
     func deleteCharBeforeCursor() {
+        feedbackGen.impactOccurred()
         textDocumentProxy.deleteBackward()
     }
 }
